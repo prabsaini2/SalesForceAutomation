@@ -1,0 +1,411 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6040880978,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I login to SalesForce website",
+            "match": {
+              "location": "AccountPageSteps.i_login_to_SalesForce_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12526952198,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I click on Accounts tab dropdown",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Accounts_tab_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 637755416,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on New Account",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_New_Account()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Confirm account is created with scenario outline",
+        "description": "",
+        "id": "go-to-accounts-to-create-new-account.;confirm-account-is-created-with-scenario-outline;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5607480193,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I fill details \"Jassi\" \"2586\" \"12 Bhandup\" \"India\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jassi\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"2586\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"12 Bhandup\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"India\"",
+                  "offset": 43
+                }
+              ],
+              "location": "AccountPageSteps.iFillDetails(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 347055186,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I click on Save",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12182613729,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify the account is created for \"Jassi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jassi\"",
+                  "offset": 34
+                }
+              ],
+              "location": "AccountPageSteps.verifyTheAccountIsCreatedFor(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d84.0.4147.89)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Admins-MacBook.local\u0027, ip: \u0027fe80:0:0:0:1474:776:f9be:ff1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /var/folders/td/_jd4flrj4nj...}, goog:chromeOptions: {debuggerAddress: localhost:49877}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: c6fd2e4d14404a5e39b59a6581e4b13b\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\n\tat pageObjects.CommonPage.deleteAccount(CommonPage.java:100)\n\tat parallel.stepDefinitions.AccountPageSteps.iDeleteTheCreatedAccount(AccountPageSteps.java:73)\n\tat ✽.I delete the created Account(file:src/test/java/resources/Account.feature:18)\n",
+              "duration": 368215562,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "I delete the created Account",
+            "match": {
+              "location": "AccountPageSteps.iDeleteTheCreatedAccount()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6785504005,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I login to SalesForce website",
+            "match": {
+              "location": "AccountPageSteps.i_login_to_SalesForce_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13209381862,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I click on Accounts tab dropdown",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Accounts_tab_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d84.0.4147.89)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Admins-MacBook.local\u0027, ip: \u0027fe80:0:0:0:1474:776:f9be:ff1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /var/folders/td/_jd4flrj4nj...}, goog:chromeOptions: {debuggerAddress: localhost:49944}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 1c0e4d8d28639585a507b366a0ae393b\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\n\tat pageObjects.CommonPage.clickOnNewAccount(CommonPage.java:79)\n\tat parallel.stepDefinitions.AccountPageSteps.i_click_on_New_Account(AccountPageSteps.java:36)\n\tat ✽.I click on New Account(file:src/test/java/resources/Account.feature:5)\n",
+              "duration": 20728307531,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "I click on New Account",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_New_Account()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "Confirm account is created with scenario outline",
+        "description": "",
+        "id": "go-to-accounts-to-create-new-account.;confirm-account-is-created-with-scenario-outline;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 22210,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "I fill details \"Sunny\" \"7589\" \"231 Mulund\" \"India\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sunny\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"7589\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"231 Mulund\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"India\"",
+                  "offset": 43
+                }
+              ],
+              "location": "AccountPageSteps.iFillDetails(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10257,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "I click on Save",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14606,
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "Verify the account is created for \"Sunny\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sunny\"",
+                  "offset": 34
+                }
+              ],
+              "location": "AccountPageSteps.verifyTheAccountIsCreatedFor(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35065,
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "I delete the created Account",
+            "match": {
+              "location": "AccountPageSteps.iDeleteTheCreatedAccount()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6693919341,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I login to SalesForce website",
+            "match": {
+              "location": "AccountPageSteps.i_login_to_SalesForce_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10745451697,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I click on Accounts tab dropdown",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Accounts_tab_dropdown()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1182153537,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on New Account",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_New_Account()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Confirm account is created with scenario outline",
+        "description": "",
+        "id": "go-to-accounts-to-create-new-account.;confirm-account-is-created-with-scenario-outline;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6887718893,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I fill details \"Aman\" \"7589\" \"78 Kalyan\" \"India\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Aman\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"7589\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"78 Kalyan\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"India\"",
+                  "offset": 41
+                }
+              ],
+              "location": "AccountPageSteps.iFillDetails(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 544824997,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I click on Save",
+            "match": {
+              "location": "AccountPageSteps.i_click_on_Save()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3546732946,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify the account is created for \"Aman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Aman\"",
+                  "offset": 34
+                }
+              ],
+              "location": "AccountPageSteps.verifyTheAccountIsCreatedFor(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1878346057,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I delete the created Account",
+            "match": {
+              "location": "AccountPageSteps.iDeleteTheCreatedAccount()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Go to Accounts to create new Account.",
+    "description": "",
+    "id": "go-to-accounts-to-create-new-account.",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/resources/Account.feature",
+    "tags": []
+  }
+]
