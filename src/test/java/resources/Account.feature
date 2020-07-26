@@ -21,7 +21,8 @@ Feature: Go to Accounts to create new Account.
     |Jassi|2586|12 Bhandup |India         |
     |Sunny|7589| 231 Mulund|India         |
     |Aman |7589|78 Kalyan  |India         |
-
+  
+  Scenario: Confirm New Account is created.
 
 
 
