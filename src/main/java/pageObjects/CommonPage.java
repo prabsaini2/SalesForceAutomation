@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +13,7 @@ public class CommonPage {
     WebDriver driver;
     String textAreaXpath = "//*[text()='displayName']//following::textarea[1]";
     String inputXpath = "//*[text()='displayName']//following::input[1]";
-    String dropDown = "(//*[text()='displayName']//following::lightning-primitive-icon[1])[1]";
+    String dropDown = "//*[text()='displayName']//following::lightning-primitive-icon[1]";
 
 
     public CommonPage(WebDriver driver) {
@@ -62,14 +63,11 @@ It add the right value to "displayName or variable passed in this method."
         return driver.findElement(By.xpath(getDropdown(displayName)));
     }
      public void clickSalesForceWebElement(String displayName){
-
-         try {
-             Thread.sleep(3000);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }
-
-         getDropdownWebElement(displayName).click();
+        //getDropdownWebElement(displayName).click();
+//         WebElement firstResult = new WebDriverWait(driver,(20000))
+//              .until(ExpectedConditions.elementToBeClickable(By.xpath(getDropdown(displayName))));
+//        firstResult.click();
+         clickDropDownByJs(getDropdownWebElement(displayName),driver);
      }
     public void clickTextAreaWebElement(String displayName){
 
@@ -115,5 +113,9 @@ It add the right value to "displayName or variable passed in this method."
         return driver.findElement(By.xpath("//span[contains(text(),'Home')]")).getText();
     }
 
+    public void clickDropDownByJs(WebElement element, WebDriver driver){
+        JavascriptExecutor js = ((JavascriptExecutor)driver);
+        js.executeScript("arguments[0].click();",element);
+    }
 }
 

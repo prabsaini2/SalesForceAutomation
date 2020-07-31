@@ -18,6 +18,7 @@ public class ContactsPageSteps {
     @Then("I click on Contacts tab dropdown")
     public void i_click_on_Contacts_tab_dropdown() {
         pageObjectManager.getCommonPage().clickSalesForceWebElement("Contacts");
+
     }
     @Then("I click on New Contacts")
     public void i_click_on_New_Contacts() {

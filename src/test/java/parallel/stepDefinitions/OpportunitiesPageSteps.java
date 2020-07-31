@@ -32,6 +32,10 @@ public class OpportunitiesPageSteps {
         pageObjectManager.getCommonPage().clickSalesForceInputWebElement("Close Date");
         pageObjectManager.getOpportunitiesPage().selectDate();
         pageObjectManager.getCommonPage().fillSalesForceInputWebElement("Opportunity Name","SF Project");
+        pageObjectManager.getCommonPage().clickTextAreaWebElement("Account Name");
+        pageObjectManager.getContactsPage().clickGetSearchOptionTabElement("Opp Test");
+        pageObjectManager.getOpportunitiesPage().clickOnDroopDown();
+        pageObjectManager.getOpportunitiesPage().clickOnDdOption();
 
     }
 

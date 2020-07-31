@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -27,7 +28,7 @@ public class OpportunitiesPage {
     }
     public void selectDate() {
         String month = "JULY";
-        String day = "28";
+        String day = "29";
         while (true) {
             String text = driver.findElement(By.xpath("//h2[@class='monthYear']")).getText();
             if (text.equals(month)) {
@@ -37,6 +38,18 @@ public class OpportunitiesPage {
             }
         }
         driver.findElement(By.xpath("//div[@class='scroller slds-datepicker']//div//table//tbody//tr//td//span[contains(text(),"+day+") and @class= 'slds-day weekday DESKTOP uiDayInMonthCell--default']")).click();
+    }
+//    public void getDropDown(){
+//        Select dropdown = new Select(driver.findElement(By.className("select")));
+//        dropdown.selectByIndex(2);
+//
+//    }
+    public void clickOnDroopDown(){
+        driver.findElement(By.xpath("//*[text()='Stage']//following::a[1]")).click();
+
+    }
+    public void clickOnDdOption(){
+        driver.findElement(By.xpath("//a[@role='menuitemradio' and @title='Qualification']")).click();
     }
 }
 

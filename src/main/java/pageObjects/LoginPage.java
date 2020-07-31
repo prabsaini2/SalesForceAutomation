@@ -45,11 +45,7 @@ public class LoginPage {
         getUsername().sendKeys("prabsaini2-57fd@force.com");
         getPassword().sendKeys("Monday10");
         getLogin().click();
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+
     }
     public void openSalesForce(){
 

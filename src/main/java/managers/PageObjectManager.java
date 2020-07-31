@@ -14,6 +14,8 @@ public class PageObjectManager {
     private LoginPage loginPage;
     private LeadsPage leadsPage;
     private OpportunitiesPage opportunitiesPage;
+    private CasesPage casesPage;
+    private TasksPage tasksPage;
 
     public PageObjectManager(WebDriver driver) {
 
@@ -48,4 +50,11 @@ public class PageObjectManager {
     public OpportunitiesPage getOpportunitiesPage(){
         return (opportunitiesPage == null) ? opportunitiesPage = new OpportunitiesPage(driver) : opportunitiesPage;
     }
+    public CasesPage getCasesPage(){
+        return (casesPage == null) ? casesPage = new CasesPage(driver) : casesPage;
+    }
+    public TasksPage getTasksPage(){
+               return (tasksPage == null)? tasksPage = new TasksPage(driver) : tasksPage;
+    }
+
 }

@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class ContactsPage {
     WebDriver driver;
@@ -24,8 +25,8 @@ public class ContactsPage {
         return driver.findElement(By.xpath(getSearchOptionTabWebElementXpath(name)));
     }
     public void clickGetSearchOptionTabElement(String name){
+
         getSearchOptionTabWebElement(name).click();
     }
-
 
 }
