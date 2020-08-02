@@ -33,7 +33,7 @@ public class AccountPageSteps {
 
     @Then("I click on New Account")
     public void i_click_on_New_Account() {
-        pageObjectManager.getCommonPage().clickOnNewAccount();
+        pageObjectManager.getCommonPage().clickOnPagesNewItemToCreateNew();
 
     }
 

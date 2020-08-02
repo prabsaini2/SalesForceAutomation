@@ -14,6 +14,7 @@ public class CommonPage {
     String textAreaXpath = "//*[text()='displayName']//following::textarea[1]";
     String inputXpath = "//*[text()='displayName']//following::input[1]";
     String dropDown = "//*[text()='displayName']//following::lightning-primitive-icon[1]";
+    String searchOptionTab = "//div[@title='name']";
 
 
     public CommonPage(WebDriver driver) {
@@ -34,6 +35,10 @@ public class CommonPage {
     public String getDropdown() {
 
         return dropDown;
+    }
+    public String getSearchOptionTab(){
+
+        return searchOptionTab;
     }
 /*
 It add the right value to "displayName or variable passed in this method."
@@ -79,9 +84,9 @@ It add the right value to "displayName or variable passed in this method."
     public void fillSalesForceInputWebElement(String displayName, String input){
         getInputWebElement(displayName).sendKeys(input);
     }
-    public void clickOnNewAccount(){
-        driver.findElement(By.xpath("//one-app-nav-bar-menu-item[1]//a[1]//span[1]//lightning-icon[1]//lightning-primitive-icon[1]//*[local-name()='svg']")).click();
-    }
+//    public void clickOnNewAccount(){
+//        driver.findElement(By.xpath("//one-app-nav-bar-menu-item[1]//a[1]//span[1]//lightning-icon[1]//lightning-primitive-icon[1]//*[local-name()='svg']")).click();
+//    }
     public void clickSalesForceInputWebElement(String displayName) {
 
         getInputWebElement(displayName).click();
@@ -116,6 +121,23 @@ It add the right value to "displayName or variable passed in this method."
     public void clickDropDownByJs(WebElement element, WebDriver driver){
         JavascriptExecutor js = ((JavascriptExecutor)driver);
         js.executeScript("arguments[0].click();",element);
+    }
+    public void clickOnPagesNewItemToCreateNew() {
+// Initialize and wait till element(link) became clickable - timeout in 10 seconds
+        WebElement firstResult = new WebDriverWait(driver, (20000))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='menuItemsWrapper']//child::lightning-primitive-icon")));
+        firstResult.click();
+    }
+    public String getSearchOptionTabWebElementXpath(String name){
+        return getSearchOptionTab().replace("name",name);
+
+    }
+    public WebElement getSearchOptionTabWebElement(String name) {
+        return driver.findElement(By.xpath(getSearchOptionTabWebElementXpath(name)));
+    }
+    public void clickGetSearchOptionTabElement(String name){
+
+        getSearchOptionTabWebElement(name).click();
     }
 }
 

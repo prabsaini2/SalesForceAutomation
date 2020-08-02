@@ -25,7 +25,7 @@ public class LeadsPageSteps {
 
     @Then("I click on New Lead")
     public void i_click_on_New_Lead() {
-        pageObjectManager.getLeadsPage().clickOnNewLead();
+        pageObjectManager.getCommonPage().clickOnPagesNewItemToCreateNew();
 
     }
 

@@ -23,7 +23,7 @@ public class TasksPageSteps {
 
     @Then("I click on New Task")
     public void i_click_on_New_Task() {
-        pageObjectManager.getOpportunitiesPage().clickOnNewOpportunity();
+        pageObjectManager.getCommonPage().clickOnPagesNewItemToCreateNew();
 
     }
 
@@ -31,6 +31,7 @@ public class TasksPageSteps {
     public void i_fill_new_Task_Form() {
         pageObjectManager.getCommonPage().clickSalesForceInputWebElement("Subject");
         pageObjectManager.getTasksPage().clickOnSubjectSearch();
+
 
 
     }

@@ -24,7 +24,7 @@ public class CasesPageSteps {
 
     @Then("I click on New Case")
     public void i_click_on_New_Case() {
-        pageObjectManager.getOpportunitiesPage().clickOnNewOpportunity();
+        pageObjectManager.getCommonPage().clickOnPagesNewItemToCreateNew();
 
     }
 

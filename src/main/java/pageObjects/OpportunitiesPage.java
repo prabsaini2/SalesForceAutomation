@@ -19,13 +19,14 @@ public class OpportunitiesPage {
         this.driver = driver;
     }
 
-    public void clickOnNewOpportunity(){
+    //public void clickOnNewOpportunity(){
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-        WebElement firstResult = new WebDriverWait(driver,(20000))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='menuItemsWrapper']//child::lightning-primitive-icon")));
-        firstResult.click();
+//        WebElement firstResult = new WebDriverWait(driver,(20000))
+//                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='menuItemsWrapper']//child::lightning-primitive-icon")));
+//        firstResult.click();
         //driver.findElement(By.xpath("//div[@class='menuItemsWrapper']//child::lightning-primitive-icon")).click();
-    }
+
+   // }
     public void selectDate() {
         String month = "JULY";
         String day = "29";

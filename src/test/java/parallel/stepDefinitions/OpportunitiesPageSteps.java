@@ -23,7 +23,7 @@ public class OpportunitiesPageSteps {
 
     @Then("I click on New Opportunity")
     public void i_click_on_New_Opportunity() {
-        pageObjectManager.getOpportunitiesPage().clickOnNewOpportunity();
+        pageObjectManager.getCommonPage().clickOnPagesNewItemToCreateNew();
 
     }
 
@@ -33,7 +33,7 @@ public class OpportunitiesPageSteps {
         pageObjectManager.getOpportunitiesPage().selectDate();
         pageObjectManager.getCommonPage().fillSalesForceInputWebElement("Opportunity Name","SF Project");
         pageObjectManager.getCommonPage().clickTextAreaWebElement("Account Name");
-        pageObjectManager.getContactsPage().clickGetSearchOptionTabElement("Opp Test");
+        pageObjectManager.getCommonPage().clickGetSearchOptionTabElement("Opp Test");
         pageObjectManager.getOpportunitiesPage().clickOnDroopDown();
         pageObjectManager.getOpportunitiesPage().clickOnDdOption();
 
