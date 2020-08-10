@@ -9,6 +9,8 @@ import managers.DriverManager;
 import managers.PageObjectManager;
 import org.junit.Assert;
 
+import java.io.IOException;
+
 public class AccountPageSteps {
     private TestContext testContext;
     private DriverManager driverManager;
@@ -20,7 +22,7 @@ public class AccountPageSteps {
     }
 
     @Given("I login to SalesForce website")
-    public void i_login_to_SalesForce_website() {
+    public void i_login_to_SalesForce_website() throws IOException {
         pageObjectManager.getLoginPage().openSalesForce();
         pageObjectManager.getLoginPage().loginAsValidUser();
     }

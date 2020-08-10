@@ -5,10 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 public class LoginPage {
     WebDriver driver;
 
-    @FindBy(id="username")
+   @FindBy(id="username")
     WebElement username;
 
     @FindBy(id="password")
@@ -17,9 +21,10 @@ public class LoginPage {
     @FindBy(id="Login")
     WebElement login;
 
-    public LoginPage() {
-    }
 
+
+    public LoginPage()  {
+    }
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -41,9 +46,17 @@ public class LoginPage {
 
         return login;
     }
-    public void loginAsValidUser(){
-        getUsername().sendKeys("prabsaini2-57fd@force.com");
-        getPassword().sendKeys("Monday10");
+    public void loginAsValidUser() throws IOException {
+        FileInputStream fis = new FileInputStream("/Users/Prab/IdeaProjects/salesforce-auto/credentials/config.properties");
+
+        Properties prop = new Properties();
+        prop.load(fis);
+        String userName = prop.getProperty("uname");
+        String pword = prop.getProperty("pwd");
+
+
+        getUsername().sendKeys(userName);
+        getPassword().sendKeys(pword);
         getLogin().click();
 
     }

@@ -73,6 +73,7 @@ It add the right value to "displayName or variable passed in this method."
 //              .until(ExpectedConditions.elementToBeClickable(By.xpath(getDropdown(displayName))));
 //        firstResult.click();
          clickDropDownByJs(getDropdownWebElement(displayName),driver);
+
      }
     public void clickTextAreaWebElement(String displayName){
 
@@ -119,6 +120,7 @@ It add the right value to "displayName or variable passed in this method."
     }
 
     public void clickDropDownByJs(WebElement element, WebDriver driver){
+        //Ref: https://www.youtube.com/watch?v=P6LBk_qzISg&list=LLls3LANdXHoKFrXIYiMK-cw&index=2&t=2402s Time:35 mins
         JavascriptExecutor js = ((JavascriptExecutor)driver);
         js.executeScript("arguments[0].click();",element);
     }
