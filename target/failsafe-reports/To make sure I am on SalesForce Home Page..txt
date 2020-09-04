@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: To make sure I am on SalesForce Home Page.
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 57.72 s - in To make sure I am on SalesForce Home Page.

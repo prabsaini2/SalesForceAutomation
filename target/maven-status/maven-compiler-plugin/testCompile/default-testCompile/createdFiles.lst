@@ -1,5 +1,0 @@
-parallel/stepDefinitions/AccountPageSteps.class
-parallel/stepDefinitions/HomePageSteps.class
-parallel/stepDefinitions/ContactsPageSteps.class
-parallel/stepDefinitions/LoginPageSteps.class
-parallel/RunCucumberIT.class
