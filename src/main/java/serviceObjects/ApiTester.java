@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class ApiTester {
     Response response;
-    RequestSpecification request= RestAssured.given().auth().none();
+    RequestSpecification request= RestAssured.given().log().all().auth().none();
 
     public Response getResponse(int firstNumber, int secondNumber) {
        //return response = request.get("http://localhost:8282/api/substract/5/2");
@@ -20,14 +20,21 @@ public class ApiTester {
                 "\"firstNumber\":10,\n" +
                 "\"secondNumber\":6\n" +
                 "}";
-        return response = request.log().all().body(body).post("http://localhost:8282/api/calculator");
+        return response = request.body(body).post("http://localhost:8282/api/calculator");
 
-    }
-    public Response getAddResponse() {
-        return response = request.log().all().get("http://localhost:8282/api/add/5/2");
+   }
+
+   public Response getAddResponse(int fNum, int sNum){
+        response = request.get("http://localhost:8282/api/add/{firstNumber}/{secondNumber}",fNum,sNum);
+        return response;
+   }
 
 
-    }
+//    public Response getAddResponse() {
+//        return response = request.log().all().get("http://localhost:8282/api/add/5/2");
+//
+//
+//    }
 
 //    @Test
 //    public void testGetCall(){
@@ -40,10 +47,10 @@ public class ApiTester {
 //        System.out.println (response.getTime());
 
    //}
-    @Test
-    public void testPostCall(){
-        int post = postResponse().getStatusCode();
-        assert post==200;
+//    @Test
+//    public void testPostCall(){
+//        int post = postResponse().getStatusCode();
+//        assert post==200;
     }
 //    @Test
 //    public void testGetAddCall() {
@@ -56,6 +63,6 @@ public class ApiTester {
 //    }
 
 
-}
+//}
 
 
